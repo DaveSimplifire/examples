@@ -35,18 +35,21 @@ class PhoneBook extends React.Component {
   render() {
     return (
       <div>
-        <h1>Phone Book</h1>
+        <h1>Your Agreements</h1>
         <div>
-          Insert or update a new phone book entry:
+          Create new project
           <table>
-            <tr><td>Name:</td><td><input required id="newEntryName"></input></td></tr>
+            <tr><td>Project:</td><td><input required id="newEntryName"></input></td></tr>
             <tr><td>Description:</td><td><input id="newEntryDesc"></input></td></tr>
-            <tr><td>Phone:</td><td><input required id="newEntryPhone" type="tel" pattern="[0-9]{10}"></input></td></tr>
+            <tr><td>Date Created:</td><td><input required id="newEntryPhone" type="tel" pattern="[0-9]{10}"></input></td></tr>
           </table>
+          <br></br>
           <button onClick={() => this.doInsert()}>Insert or Update</button>
         </div>
+        <br></br>
+        <br></br>
         <div>
-          Lookup Name: <input id="lookupName"></input> <button onClick={
+          Find Current Project: <input id="lookupName"></input> <button onClick={
             () => this.lookup()
           }>Lookup</button>
         </div>
